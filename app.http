@@ -1,3 +1,6 @@
+GET http://localhost:3000/users
+
+####
 POST http://localhost:3010/register 
 Content-Type: application/json 
 
@@ -15,12 +18,12 @@ Content-Type: application/json
 
 
 //login success
-POST http://localhost:3000/login
+POST https://srb-user-data.onrender.com/login
 Content-Type: application/json 
 
 {
-  "username": "sagara",
-  "password": "123Kadafd"
+  "username": "sagar Babu",
+  "password": "123@msbg"
 }
 
 
@@ -38,7 +41,7 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3000/change-password 
+PUT https://srb-user-data.onrender.com/change-password 
 Content-Type: application/json
 
 {

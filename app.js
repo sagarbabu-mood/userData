@@ -36,6 +36,12 @@ const validatePassword = (password) => {
   return password.length > 4;
 };
 
+app.get("/users", async (request, response) => {
+  const getUsersQuery = `SELECT * FROM user`;
+  const usersArray = await database.all(getUsersQuery);
+  console.log(usersArray);
+});
+
 app.post("/register", async (request, response) => {
   const { username, name, password, gender, location } = request.body;
   const hashedPassword = await bcrypt.hash(password, 10);
