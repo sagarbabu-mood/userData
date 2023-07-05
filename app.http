@@ -1,0 +1,48 @@
+POST http://localhost:3010/register 
+Content-Type: application/json 
+
+{
+  "username": "saara",
+  "name": "Adam Richard",
+  "password": "123Kadafd",
+  "gender": "male",
+  "location": "Detroit"
+}
+
+
+###
+
+
+
+//login success
+POST http://localhost:3000/login
+Content-Type: application/json 
+
+{
+  "username": "sagara",
+  "password": "123Kadafd"
+}
+
+
+
+###
+
+
+//invalid password
+POST http://localhost:3000/login
+Content-Type: application/json 
+
+{
+  "username": "adam_richards",
+  "password": "richard_568"
+}
+
+###
+PUT http://localhost:3000/change-password 
+Content-Type: application/json
+
+{
+  "username": "sagar",
+  "oldPassword": "123Kadafd",
+  "newPassword": "richard@456"
+}
