@@ -40,6 +40,7 @@ app.get("/users", async (request, response) => {
   const getUsersQuery = `SELECT * FROM user`;
   const usersArray = await database.all(getUsersQuery);
   console.log(usersArray);
+  response.send(usersArray);
 });
 
 app.post("/register", async (request, response) => {
